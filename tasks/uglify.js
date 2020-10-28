@@ -132,7 +132,7 @@ module.exports = function(grunt) {
           }
           var destToSourceMapPath = relativePath(f.dest, options.generatedSourceMapName);
           var sourceMapBasename = path.basename(options.generatedSourceMapName);
-          options.sourceMap.url = uriPath(path.join(destToSourceMapPath, sourceMapBasename));
+          options.sourceMap.url = uriPath(path.join(destToSourceMapPath, sourceMapBasename)) + Date();
         }
       }
 
